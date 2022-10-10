@@ -1,0 +1,42 @@
+@import '../variables/variable';
+@import '../mixins/mixin';
+
+.watchOnTv {
+    padding: $paddingTopBottom;
+    border-bottom: $border-bottom;
+    &__content {
+        align-items: center;
+    }
+
+    &__text {
+        h1 {
+            font-size: $h1-font-size;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            padding-top: 20px;
+        }
+    }
+    &__img{
+        position: relative;
+        img{
+            position: relative;
+            z-index: 2;
+        }
+    }
+    &__img-video {
+        video{
+            width: 100%;
+            height: 100%;
+        }
+        height: 100%;
+        left: 50%;
+        max-height: 54%;
+        max-width: 73%;
+        position: absolute;
+        top: 48%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+}

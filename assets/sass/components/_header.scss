@@ -1,0 +1,28 @@
+@import '../variables/variable';
+@import '../mixins/mixin';
+
+.header {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 10;
+
+    &__content {
+        display: flex;
+        background-color: transparent;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    &__signButton {
+        background-color: #E50914;
+        border-radius: 5px;
+
+        a {
+            padding: 7px 10px;
+            color: $first-color;
+            border-radius: 10px;
+        }
+    }
+}

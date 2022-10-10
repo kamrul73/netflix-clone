@@ -1,0 +1,121 @@
+@import '../variables/variable';
+@import '../mixins/mixin';
+
+.download {
+    padding: $paddingTopBottom;
+    border-bottom: $border-bottom;
+
+    &__content {
+        align-items: center;
+
+        &__text {
+            margin-top: 70px;
+
+            h2 {
+                font-size: $h1-font-size;
+            }
+
+            p {
+                font-size: $h2-font-size;
+                margin-top: $margin-top;
+            }
+        }
+    }
+
+    &__content__img {
+        .download__content-mobile {
+            position: relative;
+            z-index: 5;
+            width: 400px;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__content-downloading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #222;
+        padding: 10px 0;
+        border-radius: 20px;
+        width: 310px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+        margin-top: -30%;
+        background: #000;
+        margin-left: 40px;
+
+        &>div {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &--movie__icon {
+            width: 60px;
+            height: 80px;
+
+            img {
+                width: 90%;
+                height: 95%;
+            }
+        }
+
+        &-download__text {
+            h4 {
+                font-size: $h3-font-size;
+            }
+
+            a {
+                font-size: $h3-font-size;
+                color: #0071eb;
+            }
+        }
+
+        &-download__status {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .download__content {
+        display: flex;
+        text-align: center;
+        flex-direction: column-reverse;
+
+        &__text {
+            h2 {
+                font-size: $h2-font-size;
+            }
+
+            p {
+                font-size: $h3-font-size;
+            }
+        }
+    }
+
+    .download__content-mobile {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .download__content-downloading {
+        margin: 0 auto;
+        margin-top: -130px;
+    }
+
+    .download__content-downloading {
+        margin-top: -130px;
+    }
+
+    .download__content__text {
+        margin-top: 150px;
+    }
+}

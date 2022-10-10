@@ -1,0 +1,42 @@
+@import '../variables/variable';
+@import '../mixins/mixin';
+
+.contactUs {
+    padding: 50px 0 20px 0;
+
+    &__content {
+        &__title {
+            margin-bottom: $margin-top;
+            a {
+                color: #737373;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            li {
+                line-height: 30px;
+
+                a {
+                    color: #737373;
+                    font-size: 12px;
+
+                    &:hover {
+                        color: #737373;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        margin-top: $margin-top;
+        color: #737373;
+        font-size: 12px;
+    }
+}

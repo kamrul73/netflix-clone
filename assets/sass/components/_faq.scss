@@ -1,0 +1,174 @@
+@import '../variables/variable';
+@import '../mixins/mixin';
+
+
+.faq {
+    padding: $paddingSmall;
+    border-bottom: $border-bottom;
+
+    &__QnA {
+        &__title {
+            h2 {
+                font-size: $h1-font-size;
+                text-align: center;
+            }
+        }
+
+        &__questionNanswere {
+            margin: $paddingSmall;
+
+            .question {
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .qbox,
+            .ansBox {
+                background: #303030;
+                margin-top: 2px;
+                padding: 25px;
+            }
+
+            .ansBox {
+                p {
+                    font-size: $h2-font-size;
+                }
+            }
+
+            .qbox {
+                display: flex;
+                padding: 15px 25px;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                visibility: visible;
+                user-select: none;
+
+                h2 {
+                    font-size: $h2-font-size;
+                    letter-spacing: 1.4px;
+                }
+
+                button {
+                    font-size: 1.5rem;
+                    background: transparent;
+                    border-color: transparent;
+                    cursor: pointer;
+                    color: #fff;
+                    transition: .3s all linear;
+
+                    &:hover {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        &__emailBomb {
+            h3 {
+                font-size: $h3-font-size;
+                text-align: center;
+                margin-top: $margin-top;
+            }
+
+            .email-form-lockup {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: $margin-top;
+
+                input[type="email"] {
+                    padding: 15px 10px;
+                    border: none;
+                    border-right: 1px solid #8C8C8C;
+                    outline: none;
+                    min-width: 450px;
+                }
+
+                .subs {
+                    background-color: red;
+                    padding: 15px 10px;
+                    cursor: pointer;
+                    width: 150px;
+                    border-left: 1px solid #333333;
+
+                    a {
+                        color: $first-color;
+                    }
+
+                    &:hover {
+                        background: #f40612;
+                    }
+                }
+            }
+
+        }
+
+        // ************ show and hide ans box 
+        .ansBox {
+            display: none;
+        }
+
+        .minus-icon {
+            display: none;
+        }
+
+        .show-text .ansBox {
+            user-select: none;
+            display: block;
+        }
+
+        .show-text .minus-icon {
+            display: inline;
+        }
+
+        .show-text .plus-icon {
+            display: none;
+        }
+    }
+}
+
+@media screen and(max-width: 991px) {
+    .faq__QnA {
+        &__title {
+            h2 {
+                font-size: $h2-font-size;
+            }
+        }
+
+        &__questionNanswere {
+            .question {
+                .qbox {
+                    h2 {
+                        font-size: $h3-font-size;
+                    }
+
+                    i {
+                        font-size: $h3-font-size;
+                    }
+                }
+
+                .ansBox {
+                    p {
+                        font-size: $Pra-font-size;
+                    }
+                }
+            }
+        }
+    }
+
+    .faq__QnA__emailBomb {
+        .email-form-lockup {
+            flex-direction: column;
+
+            .subs {
+                margin-top: $margin-top;
+                text-align: center;
+            }
+        }
+    }
+}

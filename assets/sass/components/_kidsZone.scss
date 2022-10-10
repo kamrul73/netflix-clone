@@ -1,0 +1,36 @@
+@import '../variables/variable';
+@import '../mixins/mixin';
+
+.kidsZone {
+    padding: $paddingSmall;
+    border-bottom: $border-bottom;
+
+    &__text {
+        h2 {
+            font-size: $h1-font-size;
+        }
+
+        p {
+            font-size: $h2-font-size;
+            margin-top: $margin-top;
+            line-height: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .kidsZone__content{
+        display: flex;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    .kidsZone__text{
+        h2{
+            font-size: $h2-font-size;
+        }
+        p{
+            font-size: $h3-font-size;
+            line-height: 1.625rem;
+        }
+    }
+}

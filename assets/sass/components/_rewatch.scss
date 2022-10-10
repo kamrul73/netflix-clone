@@ -1,0 +1,32 @@
+@import '../variables/variable';
+@import '../mixins/mixin';
+
+.rewatch {
+    border-bottom: $border-bottom;
+    &__wrapper {
+        padding: $paddingSmall;
+    }
+    &__text{
+        width: 55%;
+        h2{
+            font-size: $h1-font-size;
+        }
+        p{
+            font-size: $h2-font-size;
+            margin-top: $margin-top;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .rewatch__text{
+        width: 100%;
+        text-align: center;
+        h2{
+            font-size: $h2-font-size;
+        }
+        p{
+            font-size: $h3-font-size;
+        }
+    }
+}
